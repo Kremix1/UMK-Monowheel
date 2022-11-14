@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>UMK-MonoWheel</title>
+    <meta charset="UTF-8">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div id="bg" class="main-content">
+            <div class="background">
+                <nav class="main-content__header navbar navbar-expand-lg">
+                    <div id="navbar" class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img class="main-content__logo" src="img/main/logo.svg" alt="">
+                        </a>
+                        <div id="nav-mobile" class="nav-mobile">
+                            <a class="navbar-phone" href="#">+7 999 999 99-99</a>
+                            <div id="nav-toggler" class="burger-toggler navbar-toggler"></div>
+                            <div id="burger-menu" class="burger-menu erase">
+                                <a id="burger-service" class="burger-item links-item_active info-link-margin burger-service" href="#crashes">Сервис</a>
+                                <a id="burger-shop" class="burger-item info-link-margin burger-shop" href="#shop">Наш магазин</a>
+                                <a id="burger-asks" class="burger-item info-link-margin burger-asks" href="#questions">Новичку</a>
+                                <a id="burger-about" class="burger-item info-link-margin burger-about" href="#aboutUs" style="margin: 0;">О нас</a>
+                            </div>
+                        </div>
+
+                        <div id="navbarNavAltMarkup" class="collapse navbar-collapse">
+                        <div id="navbar-nav-first" class="navbar-nav navbar-nav-first" style="flex-basis: 45%">
+                            <a id="navbar-city" class="nav-link" href="#">Екатеринбург</a>
+                            <a id="navbar-phone" class="nav-link link-phone" href="#">+7 999 999 99-99</a>
+                        </div>
+                        <div id="navbar-nav-second" class="navbar-nav navbar-nav-second" flex-basis: auto;>
+                            <a id="burger-service" class="nav-link links-item_active info-link-margin" href="#crashes">Сервис</a>
+                            <a id="burger-shop" class="nav-link info-link-margin" href="#shop">Наш магазин</a>
+                            <a id="burger-asks" class="nav-link info-link-margin" href="#questions">Новичку</a>
+                            <a id="burger-about" class="nav-link info-link-margin" href="#aboutUs" style="margin: 0;">О нас</a>
+                        </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="main-content__title">Ремонт и модификация моноколес</div>
+                <a href="#crashes" class="main-content__catalogue yellow-button">К каталогу услуг</a>
+                <div class="main-content__slider">
+                    <div class="slider__box_active" id="box1" onclick="ColorLeft()"></div>
+                    <div class="slider__box" id="box2" onclick="ColorRight()"></div>
+                </div>
+            </div>
+        </div>  
+        <div class="container">
+            <div id="crashes" class="crashes">
+                <div  class="crashes__title title">Распространенные поломки и их причины</div>
+                <div class="crashes__subtitle subtitle">Осуществляем весь спектр услуг по техническому обслуживанию и ремонту моноколес. Проведем диагностику, устраним неисправности, поможем подобрать и модифицируем моноколесо под ваши желания</div>
+                <div class="crashes__prices">
+                    <div class="container">
+                        <div class="row">
+                            <div class="prices__item col-lg-4 col-md-6 row-flex">
+                                <div class="prices__card-item card">
+                                    <div class="card-body">
+                                        <h5 class="prices__title card-title">Спустило колесо</h5>
+                                        <p class="prices__main card-text">Необходима замена камеры или камеры с покрышкой</p>
+                                        <div class="prices__details">
+                                            <div class="details__time">≈ 20 мин</div>
+                                            <div class="details__price">от 1 000 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prices__item col-lg-8 col-md-6 row-flex">
+                                <div class="prices__card-item card">
+                                    <div class="card-body">
+                                        <h5 class="prices__title card-title">При езде что-то скрипит, хрустит, трет</h5>
+                                        <p class="prices__main card-text">Причин может быть несколько: от забитой посторонними предметами арки до треснутого корпуса и проблемами со стойками мотора</p>
+                                        <div class="prices__details">
+                                            <div class="details__time">≈ 1,5 часа</div>
+                                            <div class="details__price">от 1 200 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="prices__item col-lg-4 col-md-6 row-flex">
+                                <div class="prices__card-item card">
+                                    <div class="card-body">
+                                        <h5 class="prices__title card-title">Не работает музыка, фара, LED лента</h5>
+                                        <p class="prices__main card-text">Пропал контакт или вышли из строя компоненты плат</p>
+                                        <div class="prices__details">
+                                            <div class="details__time">≈ 40 мин</div>
+                                            <div class="details__price">от 900 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prices__item col-lg-4 col-md-6 row-flex">
+                                <div class="prices__card-item card">
+                                    <div class="card-body">
+                                        <h5 class="prices__title card-title">Моноколесо не включается</h5>
+                                        <p class="prices__main card-text">Здесь виновата либо кнопка включения, либо контроллер — главная плата моноколеса</p>
+                                        <div class="prices__details">
+                                            <div class="details__time">≈ 2 часа</div>
+                                            <div class="details__price">от 2 200 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prices__item col-lg-4 col-md-12 row-flex">
+                                <div class="prices__card-item card">
+                                    <div class="card-body">
+                                        <h5 class="prices__title card-title">Не нравится внешний вид моноколеса</h5>
+                                        <p class="prices__main card-text">Решается обтяжкой его в плёнку или нанесением специального состава</p>
+                                        <div class="prices__details">
+                                            <div class="details__time">≈ 1 часа</div>
+                                            <div class="details__price">от 3 000 ₽</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crashes__full-catalogue">
+                            <a class="black-button" style="display: flex; justify-content: center; align-items: center;" href="#">
+                                <div class="full-catalogue__text full-catalogue-big">Полный каталог услуг</div>
+                                <div class="full-catalogue__img full-catalogue-big__img"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#request"><div class="crashes__fix-request yellow-button" style="margin: 0;">Оставить заявку на ремонт</div></a>
+            </div> 
+        </div>
+
+
+        <div class="container">
+            <div id="shop" class="shop" style="padding: 60px 0 0 0;">
+                <div class="shop__title title">Наш магазин</div>
+                <div class="shop__subtitle subtitle">Занимаемся продажей широкого спектра товаров моноколесного назначения. Покрышки, камеры, блоки питания, детали ремонта. Качественная продукция, быстрая отправка.</div>
+                
+                <div class="shop__carousel">
+                    <div class="carousel__header">
+                        <div class="carousel__filter">
+                            <div id="popular-link" class="filter__popular">Популярные товары</div>
+                            <div id="new-link" class="filter__new">Новинки</div>
+                        </div>
+                        <div id="carousel__arrows" class="carousel__arrows">
+                            <a href="#" class="arrows__left-arrow">
+                                <img class="arrows__left-arrow_img" src="img/shop/left-arrow.svg" alt="">
+                            </a>
+                            <a href="#" class="arrows__right-arrow">
+                                <img class="arrows__right-arrow_img" src="img/shop/right-arrow.svg" alt="">
+                            </a>
+                        </div>
+
+                        <div id="carousel__arrows1" class="carousel__arrows" style="display: none;">
+                            <a href="#" class="arrows__left-arrow-1">
+                                <img class="arrows__left-arrow_img" src="img/shop/left-arrow.svg" alt="">
+                            </a>
+                            <a href="#" class="arrows__right-arrow-1">
+                                <img class="arrows__right-arrow_img" src="img/shop/right-arrow.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popular-slider" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="carousel__item card">
+                            <img src="img/shop/first-item.jpg" class="card-img-top" alt="...">
+                            <div class="card-body-shop">
+                                <h5 class="carousel__title card-title">Покрышка для моноколеса</h5>
+                                <p class="carousel__price card-text">от 1 800 ₽</p>
+                            </div>
+                            <a style="display: flex; justify-content: center; align-items: center;" class="black-button" href="#">
+                                <div class="full-catalogue__text shop__buy">Купить на AliExpress</div>
+                                <div class="full-catalogue__img shop__buy_arrow"></div>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="carousel__item card">
+                            <img src="img/shop/second-item.jpg" class="card-img-top" alt="...">
+                            <div class="card-body-shop">
+                                <h5 class="carousel__title card-title">Покрышка для моноколеса</h5>
+                                <p class="carousel__price card-text">от 1 150 ₽</p>
+                            </div>
+                            <a style="display: flex; justify-content: center; align-items: center;" class="black-button" href="#">
+                                <div class="full-catalogue__text shop__buy">Купить на AliExpress</div>
+                                <div class="full-catalogue__img shop__buy_arrow"></div>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="carousel__item card">
+                            <img src="img/shop/third-item.jpg" class="card-img-top" alt="...">
+                            <div class="card-body-shop">
+                                <h5 class="carousel__title card-title">Покрышка 90x65-6,5 (CST)</h5>
+                                <p class="carousel__price card-text">от 1 700 ₽</p>
+                            </div>
+                            <a style="display: flex; justify-content: center; align-items: center;" class="black-button" href="#">
+                                <div class="full-catalogue__text shop__buy">Купить на AliExpress</div>
+                                <div class="full-catalogue__img shop__buy_arrow" ></div>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="carousel__item card">
+                            <img src="img/shop/four-item.jpg" class="card-img-top" alt="...">
+                            <div class="card-body-shop">
+                                <h5 class="carousel__title card-title">Зарядное устройство</h5>
+                                <p class="carousel__price card-text">от 3 100 ₽</p>
+                            </div>
+                            <a style="display: flex; justify-content: center; align-items: center;" class="black-button" href="#">
+                                <div class="full-catalogue__text shop__buy">Купить на AliExpress</div>
+                                <div class="full-catalogue__img shop__buy_arrow"></div>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                    </div>
+                </div>
+
+                <div id="new-slider" class="swiper mySwiper1" style="display: none;">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">test 1</div>
+                      <div class="swiper-slide">test 2</div>
+                      <div class="swiper-slide">test 3</div>
+                      <div class="swiper-slide">test 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                    </div>
+                </div>
+
+                <a href="#"><div class="shop__full-catalogue yellow-button" style="margin: 0;">Полный каталог товаров</div></a>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div id="aboutUs" class="about" style="padding: 60px 0 0 0;">
+                <div class="about__us">
+                    <div class="us__title title">О нас</div>
+                    <div class="us__body">
+                        <p>УМК — признанный лидер в сфере ремонта, обслуживания и модификации моноколес.</p>
+                        <p>Каждый сотрудник является специалистом высшего уровня по своему направлению.</p>
+                        <p>Обслуживание моноколес, ремонт корпусов, ремонт и сборка аккумуляторный батарей с нуля — наш профиль.</p>
+                    </div>
+                    <a class="us__contact yellow-button" href="#request">Связаться с нами</a>
+                </div>
+                <div class="about__numbers">
+                    <div class="numbers__item numbers__first"></div>
+                    <div class="numbers__item numbers__second"></div>
+                    <div class="numbers__item numbers__third"></div>
+                    <div class="numbers__item numbers__four"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="questions" class="questions">
+                <div class="questions__title title">Часто задаваемые вопросы</div>
+                    <div class="questions__body">
+                        <div id="askSpoiler1" class="questions__item" onclick="Spoiler(1)">
+                            <div class="item__title">С моим колесом что-то не так, но почему — не знаю, как мне быть?</div>
+                            <div id="linkSpoiler1" class="item__arrow"></div>
+                        </div>
+                        <div id="contentSpoiler1" class="item__spoiler">test1</div>
+                        
+                        <div id="askSpoiler2" class="questions__item" onclick="Spoiler(2)">
+                            <div  class="item__title">Сколько будут длиться сервисные работы?</div>
+                            <div id="linkSpoiler2" class="item__arrow"></div>
+                        </div>
+                        <div id="contentSpoiler2" class="item__spoiler">test2</div>
+                        
+                        <div id="askSpoiler3" class="questions__item" onclick="Spoiler(3)">
+                            <div class="item__title">Что такое приключения и непредвиденные обстоятельства?</div>
+                            <div id="linkSpoiler3" class="item__arrow"></div>
+                        </div>
+                        <div id="contentSpoiler3" class="item__spoiler">test3</div>
+                        
+                        <div id="askSpoiler4" class="questions__item" onclick="Spoiler(4)">
+                            <div class="item__title">Что если ремонт моего колеса окажется сложнее, чем казалось ранее?</div>
+                            <div id="linkSpoiler4" class="item__arrow"></div>
+                        </div>
+                        <div id="contentSpoiler4" class="item__spoiler">При возникновении форс-мажора, мы заранее, перед началом выполнения соответствующих работ предупреждаем заказчика и согласовываем список операций, необходимых для приведения моноколеса в рабочее состояние. Заранее оглашаем вилку цен и сроки. Если заказчик принимает решение не проводить дополнительные работы — могут быть решены заявленные ранее проблемы, или вовсе моноколесо может быть возвращено заказчику без проведения каких-либо работ, но в таком случае будет необходимо заплатить за диагностику.</div>
+                        
+                        <div id="askSpoiler5" class="questions__item" onclick="Spoiler(5)">
+                            <div class="item__title">Как с вами связаться?</div>
+                            <div id="linkSpoiler5" class="item__arrow"></div>
+                        </div>
+                        <div id="contentSpoiler5" class="item__spoiler">test5</div>
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="contacts">
+                <div class="contacts__info">
+                    <div class="contacts__title title">Контакты</div>
+                    <div class="contacts__net">
+                        <a class="contacts__net_phone" href="tel:+79829617576"> +7 (982) 961-75-76</a>
+                        <a class="contacts__net_mail" href="mailto:UMK.help@mail.ru">UMK.help@mail.ru</a>
+                    </div>
+                    <ul class="contacts__address">
+                        <li class="address__list" style="margin: 0 0 10px 0;">г. Екатеринбург, Ленина, 10</li>
+                        <li class="address__list">г. Екатеринбург, Бажова, 37</li>
+                    </ul>
+                    <div class="contacts__work-time">Пн-Пт: 9:00 – 18:00</div>
+                    <div class="contacts__messengers">
+                        <a class="messengers__link" href="#"><div class="messengers__item messengers__telegram"></div></a>
+                        <a class="messengers__link" href="#"><div class="messengers__item messengers__vk"></div></a>
+                        <a class="messengers__link" href="#"><div class="messengers__item messengers__instagram"></div></a>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <iframe  class="map__inner-map" id="map_990190773" frameborder="0" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_990190773", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUpe3ZhciB0PUpTT04ucGFyc2UoZSkscj10Lm9yZGVyZWRHZW9tZXRyaWVzLG49dC5tYXBQb3NpdGlvbixhPXQuaXNXaGVlbFpvb21FbmFibGVkO2Z1bmN0aW9uIG8oZSl7cmV0dXJuIGRlY29kZVVSSUNvbXBvbmVudChhdG9iKGUpLnNwbGl0KCIiKS5tYXAoZnVuY3Rpb24oZSl7cmV0dXJuIiUiKygiMDAiK2UuY2hhckNvZGVBdCgwKS50b1N0cmluZygxNikpLnNsaWNlKC0yKX0pLmpvaW4oIiIpKX1ERy50aGVuKGZ1bmN0aW9uKCl7dmFyIGU9REcubWFwKCJtYXAiLHtjZW50ZXI6W24ubGF0LG4ubG9uXSx6b29tOm4uem9vbSxzY3JvbGxXaGVlbFpvb206YSx6b29tQ29udHJvbDohYX0pO0RHLmdlb0pTT04ocix7c3R5bGU6ZnVuY3Rpb24oZSl7dmFyIHQscixuLGEsbztyZXR1cm57ZmlsbENvbG9yOm51bGw9PT0odD1lKXx8dm9pZCAwPT09dD92b2lkIDA6dC5wcm9wZXJ0aWVzLmZpbGxDb2xvcixmaWxsT3BhY2l0eTpudWxsPT09KHI9ZSl8fHZvaWQgMD09PXI/dm9pZCAwOnIucHJvcGVydGllcy5maWxsT3BhY2l0eSxjb2xvcjpudWxsPT09KG49ZSl8fHZvaWQgMD09PW4/dm9pZCAwOm4ucHJvcGVydGllcy5zdHJva2VDb2xvcix3ZWlnaHQ6bnVsbD09PShhPWUpfHx2b2lkIDA9PT1hP3ZvaWQgMDphLnByb3BlcnRpZXMuc3Ryb2tlV2lkdGgsb3BhY2l0eTpudWxsPT09KG89ZSl8fHZvaWQgMD09PW8/dm9pZCAwOm8ucHJvcGVydGllcy5zdHJva2VPcGFjaXR5fX0scG9pbnRUb0xheWVyOmZ1bmN0aW9uKGUsdCl7cmV0dXJuInJhZGl1cyJpbiBlLnByb3BlcnRpZXM/REcuY2lyY2xlKHQsZS5wcm9wZXJ0aWVzLnJhZGl1cyk6REcubWFya2VyKHQse2ljb246ZnVuY3Rpb24oZSl7cmV0dXJuIERHLmRpdkljb24oe2h0bWw6IjxkaXYgY2xhc3M9J2J1bGxldC1tYXJrZXInIHN0eWxlPSdib3JkZXItY29sb3I6ICIrZSsiOyc+PC9kaXY+IixjbGFzc05hbWU6Im92ZXJyaWRlLWRlZmF1bHQiLGljb25TaXplOlsyMCwyMF0saWNvbkFuY2hvcjpbMTAsMTBdfSl9KGUucHJvcGVydGllcy5jb2xvcil9KX0sb25FYWNoRmVhdHVyZTpmdW5jdGlvbihlLHQpe2UucHJvcGVydGllcy5kZXNjcmlwdGlvbiYmdC5iaW5kUG9wdXAobyhlLnByb3BlcnRpZXMuZGVzY3JpcHRpb24pLHtjbG9zZUJ1dHRvbjohMCxjbG9zZU9uRXNjYXBlS2V5OiEwfSksZS5wcm9wZXJ0aWVzLnRpdGxlJiZ0LmJpbmRUb29sdGlwKG8oZS5wcm9wZXJ0aWVzLnRpdGxlKSx7cGVybWFuZW50OiEwLG9wYWNpdHk6MSxjbGFzc05hbWU6InBlcm1hbmVudC10b29sdGlwIn0pfX0pLmFkZFRvKGUpfSl9KSgneyJvcmRlcmVkR2VvbWV0cmllcyI6W3sidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7ImRlc2NyaXB0aW9uIjoiIiwic3Ryb2tlQ29sb3IiOiIjZmZiYzAwIiwic3Ryb2tlV2lkdGgiOjIsInN0cm9rZU9wYWNpdHkiOjEsImZpbGxDb2xvciI6IiNmZmU3MDAiLCJmaWxsT3BhY2l0eSI6MSwicmFkaXVzIjo1MC41NzUyMzY2OTg4MTA1MywiekluZGV4IjoxfSwiZ2VvbWV0cnkiOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOls2MC41ODc0MjEsNTYuODM2NTM4XX0sImlkIjoxMTUzfSx7InR5cGUiOiJGZWF0dXJlIiwicHJvcGVydGllcyI6eyJkZXNjcmlwdGlvbiI6IiIsInN0cm9rZUNvbG9yIjoiI2ZmYmMwMCIsInN0cm9rZVdpZHRoIjoyLCJzdHJva2VPcGFjaXR5IjoxLCJmaWxsQ29sb3IiOiIjZmZlNzAwIiwiZmlsbE9wYWNpdHkiOjEsInJhZGl1cyI6NDUuMDQyMjQ4MDY4Mzg0NjE2LCJ6SW5kZXgiOjJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzYwLjYyNDMxOCw1Ni44NDgyMDldfSwiaWQiOjE4NjJ9XSwibWFwUG9zaXRpb24iOnsibGF0Ijo1Ni44NDA0Mjg1OTQwOTgzOSwibG9uIjo2MC42MTE4Mjk3NTc2OTA0NCwiem9vbSI6MTR9LCJpc1doZWVsWm9vbUVuYWJsZWQiOnRydWV9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4=")</script>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container-fluid request-form" style="background-color: #FFBC00;">
+            <div class="request">
+                <div id="request" class="request__title title">Оставьте заявку на ремонт</div>
+                <div class="request__body">
+                    <div class="body__title subtitle">Расскажите о вашем моноколесе и оставьте свои данные, чтобы мы могли с вами связаться :)</div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6" style="margin: 0 0 15px 0;">
+                                <div class="body__form-item">
+                                    <div class="form-item__title">Модель колеса</div>
+                                    <div class="form-item__form" >
+                                        <div class="form_wrapper">
+                                            <select class="default" name="nubexSelect" form="nubexForm">
+                                                <option hidden disabled selected value></option>
+                                                <option>Супер-пупер-колесо-3000</option>
+                                                <option>Lorem ipsum dolor sit amet.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" style="margin: 0 0 40px 0;">
+                                <div class="body__form-item">
+                                    <div class="form-item__title">Неисправность</div>
+                                    <div class="form-item__form">
+                                        <div class="form_wrapper">
+                                            <select class="default" name="nubexSelect" form="nubexForm">
+                                                <option hidden disabled selected value></option>
+                                                <option>Моноколесо не включается</option>
+                                                <option>test2</option>
+                                                <option>test3</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                                <option>Lorem ipsum dolor sit.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-3" style="margin: 0 0 15px 0;">
+                                <div class="body__form-item">
+                                    <div class="form-item__title">Имя*</div>
+                                    <div class="form-item__form">
+                                        <input class="form-item__select input-text" type="text" name="nubexName" form="nubexForm" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3" style="margin: 0 0 15px 0;">
+                                <div class="body__form-item">
+                                    <div class="form-item__title">Телефон*</div>
+                                    <div class="form-item__form">
+                                        <input class="form-item__select input-text" type="text" name="nubexPhone" form="nubexForm" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3" style="margin: 0 0 15px 0;">
+                                <div class="body__form-item">
+                                    <div class="form-item__title">Почта*</div>
+                                    <div class="form-item__form">
+                                        <input class="form-item__select input-text" type="text" name="nubexMail" form="nubexForm" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body__form-item col-xxl-3">
+                                <div class="send-form">
+                                    <form name="requestForm" id="nubexForm" action="" onsubmit="return validate()">
+                                        <input class="send-form__text black-button" type="submit" value="Отправить заявку" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body__agreement">
+                        <div class="agreement__input">
+                            <input id="checkbox" class="custom-checkbox" type="checkbox"  name="nubexAgree" form="nubexForm" required>
+                            <label for="checkbox" class="agreement__text">Согласен с&nbsp;<a style="text-decoration: underline;" href="#">обработкой персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid footer-form" style="box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, .3);">
+                <div class="footer">
+                    <div class="footer-grid">
+                        <div class="footer-grid__box-links">
+                            <div class="footer__links">
+                                <a href="#"><div class="footer__links_link">Сервис</div></a>
+                                <a href="#"><div class="footer__links_link">Наш магазин</div></a>
+                                <a href="#"><div class="footer__links_link">Новичку</div></a>
+                                <a href="#"><div class="footer__links_link">О нас</div></a>
+                            </div>
+                        </div>
+                        <div class="footer-grid__box-addresses">
+                            <div class="footer__addresses">
+                                <div class="footer__addresses_phone"><a href="tel:+79829617576"></a>+7 (982) 961-75-76</div>
+                                <div class="footer__addresses_address">г. Екатеринбург, Ленина, 10</div>
+                                <div class="footer__addresses_address">г. Екатеринбург, Бажова, 37</div>
+                            </div>
+                        </div>
+                        <div class="footer-grid__box-button">
+                            <a href="#request" style="flex-shrink: 0;">
+                                <div class="footer__fix-request yellow-button">Оставить заявку на ремонт</div>
+                            </a>
+                        </div>
+                        <div class="footer-grid__box-contacts">
+                            <div class="footer__contacts">
+                                <div class="footer__contacts_logo">
+                                    <a href="#"><img class="main-content__logo" src="img/main/logo.svg" alt=""></a>
+                                </div>
+                                <div class="footer__contacts_text">Связь с нами:</div>
+                                <div class="footer__contacts_messengers contacts__messengers">
+                                    <a class="messengers__link" href="#"><div class="messengers__item messengers__telegram"></div></a>
+                                    <a class="messengers__link" href="#"><div class="messengers__item messengers__vk"></div></a>
+                                    <a class="messengers__link" href="#"><div class="messengers__item messengers__instagram"></div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/choices.min.js"></script>
+    <script src="js/choices-settings.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/main-slider.js"></script>
+    <script src="js/ask-spoiler.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
